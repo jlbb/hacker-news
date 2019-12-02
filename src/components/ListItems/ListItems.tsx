@@ -1,5 +1,6 @@
 import React from "react";
 import bem from "bera";
+import { getFormattedDate } from "../../utils";
 
 const componentClass = bem("listItems");
 
@@ -14,7 +15,11 @@ const ListItems = ({ items }: ListItemsProps) => {
         return (
           <li className={componentClass("itemContainer")}>
             <a className={componentClass("link")} href={item.url}>
-              <p className={componentClass("item")}>{item.title}</p>
+              <div className={componentClass("title")}>{item.title}</div>
+              <div className={componentClass("info")}>
+                by <span className={componentClass("author")}>{item.by}</span>
+                <span>({getFormattedDate(item.time)})</span>
+              </div>
             </a>
           </li>
         );

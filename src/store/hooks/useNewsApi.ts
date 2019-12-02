@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { TopStoriesType, StateManagement, FetchTopStoriesType } from "../types";
 import { setTopStories, setTopStoriesId } from "../actions";
 import axios from "axios";
-import { TOP_STORIES_ENDPOINT, STORY_ITEM_ENDPOINT } from "../../config/api";
+import { STORY_ITEM_ENDPOINT, NEWEST_STORIES_ENDPOINT } from "../../config/api";
 
 type NewsApiHookType = [TopStoriesType, FetchTopStoriesType];
 
@@ -16,7 +16,7 @@ const useNewsApi = (): NewsApiHookType => {
   );
 
   const _topStories = async (): Promise<string> => {
-    let res = await axios.get(`${TOP_STORIES_ENDPOINT}`);
+    let res = await axios.get(`${NEWEST_STORIES_ENDPOINT}`);
 
     return res.data;
   };

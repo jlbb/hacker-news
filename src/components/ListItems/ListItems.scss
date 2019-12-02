@@ -3,7 +3,7 @@
 }
 
 .listItems__itemContainer {
-  background-color: white;
+  background-color: linen;
   border: 1px solid blueviolet;
   border-radius: 6px;
   cursor: pointer;
@@ -11,7 +11,7 @@
   margin-bottom: 8px;
   max-width: 725px;
   min-height: 10px;
-  padding: 5px;
+  padding: 10px 5px 5px 10px;
   position: relative;
   transition: transform 0.2s;
   @media screen and (max-width: 400px) {
@@ -28,10 +28,27 @@
 
 .listItems__link {
   color: darkred;
-  min-height: 40px;
+  min-height: 50px;
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   text-decoration: none;
+}
+
+.listItems__title {
+  align-self: flex-start;
+  font-weight: bold;
+  text-align: left;
+}
+
+.listItems__info {
+  align-self: flex-end;
+  color: black;
+  font-size: 12px;
+  position: absolute;
+  right: 5px;
+}
+
+.listItems__author {
   font-weight: bold;
 }
