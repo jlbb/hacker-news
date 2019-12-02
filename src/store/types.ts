@@ -45,7 +45,9 @@ export type SetTopStoriesIdType = (
 
 export type SetTopStoriesType = (stories: TopStoriesType) => MainAppActionTypes;
 
-export type FetchTopStoriesType = () => Promise<MainAppActionTypes>;
+export type FetchTopStoriesType = (
+  nItems?: number
+) => Promise<MainAppActionTypes>;
 
 /**
  *  REDUCER TYPES

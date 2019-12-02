@@ -13,7 +13,10 @@ const ListItems = ({ items }: ListItemsProps) => {
     <ul className={componentClass()}>
       {items.map((item, key) => {
         return (
-          <li className={componentClass("itemContainer")}>
+          <li
+            className={componentClass("itemContainer")}
+            key={`itemContainer-${key}`}
+          >
             <a className={componentClass("link")} href={item.url}>
               <div className={componentClass("title")}>{item.title}</div>
               <span className={componentClass("domain")}>

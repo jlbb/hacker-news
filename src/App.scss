@@ -31,3 +31,22 @@
 .App-link {
   color: #09d3ac;
 }
+
+.App .pagination {
+  list-style: none;
+  display: flex;
+  border: 1px solid black;
+  padding: 0;
+
+  li {
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid green;
+    background-color: burlywood;
+
+    &.active,
+    &:hover {
+      background-color: white;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export const N_STORY_ITEMS = 25;
