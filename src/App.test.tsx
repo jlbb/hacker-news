@@ -6,7 +6,8 @@ import configureMockStore from "redux-mock-store";
 
 const mockedStore = {
   app: {
-    newsItems: []
+    topStories: [],
+    topStoriesId: []
   }
 };
 
@@ -24,11 +25,5 @@ beforeAll(() => {
   );
 });
 test("loads and displays App component", async () => {
-  const app = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
-
   expect(app).toBeDefined();
 });
