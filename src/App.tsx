@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { useNewsApi } from "./store/hooks";
+import ListItems from "./components/ListItems";
 
 const App = () => {
   const [newsItems, fetchNews] = useNewsApi();
@@ -9,22 +10,10 @@ const App = () => {
     fetchNews();
   }, []);
 
-  const renderNewsItems = () => {
-    return (
-      <ul>
-        {newsItems.map((item, key) => {
-          console.log(`ITEM ${key}`, item);
-
-          return <li>{item}</li>;
-        })}
-      </ul>
-    );
-  };
-
   return (
     <div className="App">
       Hacker News!
-      {renderNewsItems()}
+      <ListItems items={newsItems} />
     </div>
   );
 };

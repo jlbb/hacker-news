@@ -1,0 +1,15 @@
+.listItems__item {
+  align-items: center;
+  border: 1px solid blueviolet;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 8px;
+  min-height: 40px;
+}
+
+.listItems__item:hover {
+  background-color: lightgreen;
+}
