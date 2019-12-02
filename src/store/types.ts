@@ -1,10 +1,12 @@
-export const SET_NEWS_ITEMS = "SET_NEWS_ITEMS";
+export const SET_TOP_STORIES_ID = "SET_TOP_STORIES_IDS";
+export const SET_TOP_STORIES = "SET_TOP_STORIES";
 
 /**
  *  BASIC TYPES
  */
 
-export type NewsItemsType = string[];
+export type TopStoriesIdType = string[];
+export type TopStoriesType = any;
 
 /**
  *  STATE TYPES
@@ -15,7 +17,8 @@ export interface StateManagement {
 }
 
 export interface MainAppState {
-  newsItems: NewsItemsType;
+  topStoriesId: TopStoriesIdType;
+  topStories: TopStoriesType;
 }
 
 /**
@@ -24,15 +27,25 @@ export interface MainAppState {
 
 // MAIN APP ACTIONS
 
-interface SetNewsItemsAction {
-  type: typeof SET_NEWS_ITEMS;
-  payload: NewsItemsType;
+interface SetTopStoriesIdAction {
+  type: typeof SET_TOP_STORIES_ID;
+  payload: TopStoriesIdType;
 }
 
-export type MainAppActionTypes = SetNewsItemsAction;
+interface SetTopStoriesAction {
+  type: typeof SET_TOP_STORIES;
+  payload: TopStoriesType;
+}
 
-export type SetNewsItemsType = (newsItems: NewsItemsType) => MainAppActionTypes;
-export type FetchRandomNewsType = () => Promise<MainAppActionTypes>;
+export type MainAppActionTypes = SetTopStoriesIdAction | SetTopStoriesAction;
+
+export type SetTopStoriesIdType = (
+  storiesId: TopStoriesIdType
+) => MainAppActionTypes;
+
+export type SetTopStoriesType = (stories: TopStoriesType) => MainAppActionTypes;
+
+export type FetchTopStoriesType = () => Promise<MainAppActionTypes>;
 
 /**
  *  REDUCER TYPES

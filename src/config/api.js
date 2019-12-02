@@ -1,4 +1,4 @@
 export const NEWS_API_URL = "https://hacker-news.firebaseio.com";
-export const ITEMS_LIST_ENDPOINT = "v0/topstories.json";
-export const ITEMS_API_ENDPOINT = "v0/item";
-export const USER_API_ENDPOINT = "v0/user";
+export const TOP_STORIES_ENDPOINT =
+  "https://hacker-news.firebaseio.com/v0/topstories.json";
+export const STORY_ITEM_ENDPOINT = "https://hacker-news.firebaseio.com/v0/item";

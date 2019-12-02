@@ -1,15 +1,26 @@
-import { MainAppState, SET_NEWS_ITEMS, MainAppReducer } from "../types";
+import {
+  MainAppState,
+  SET_TOP_STORIES,
+  MainAppReducer,
+  SET_TOP_STORIES_ID
+} from "../types";
 
 const initialState: MainAppState = {
-  newsItems: []
+  topStoriesId: [],
+  topStories: []
 };
 
 const appReducer: MainAppReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_NEWS_ITEMS:
+    case SET_TOP_STORIES_ID:
       return {
         ...state,
-        newsItems: action.payload
+        topStoriesId: action.payload
+      };
+    case SET_TOP_STORIES:
+      return {
+        ...state,
+        topStories: action.payload
       };
     default:
       return state;

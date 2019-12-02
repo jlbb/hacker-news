@@ -1,11 +1,20 @@
 import {
-  SET_NEWS_ITEMS,
-  SetNewsItemsType,
+  SET_TOP_STORIES,
+  SetTopStoriesType,
+  SET_TOP_STORIES_ID,
+  SetTopStoriesIdType
 } from "./types";
 
-export const setNewsItems: SetNewsItemsType = newsItems => {
+export const setTopStoriesId: SetTopStoriesIdType = storiesId => {
   return {
-    type: SET_NEWS_ITEMS,
-    payload: newsItems
+    type: SET_TOP_STORIES_ID,
+    payload: storiesId
+  };
+};
+
+export const setTopStories: SetTopStoriesType = stories => {
+  return {
+    type: SET_TOP_STORIES,
+    payload: stories
   };
 };

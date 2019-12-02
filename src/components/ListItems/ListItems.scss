@@ -1,15 +1,37 @@
-.listItems__item {
-  align-items: center;
+.listItems {
+  padding: 0;
+}
+
+.listItems__itemContainer {
+  background-color: white;
   border: 1px solid blueviolet;
   border-radius: 6px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
   list-style-type: none;
   margin-bottom: 8px;
-  min-height: 40px;
+  max-width: 725px;
+  min-height: 10px;
+  padding: 5px;
+  position: relative;
+  transition: transform 0.2s;
+  @media screen and (max-width: 400px) {
+    max-width: 300px;
+  }
 }
 
-.listItems__item:hover {
-  background-color: lightgreen;
+.listItems__itemContainer:hover {
+  @media screen and (min-width: 768px) {
+    background-color: lightgreen;
+    transform: scale(1.2);
+  }
+}
+
+.listItems__link {
+  color: darkred;
+  min-height: 40px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
 }
