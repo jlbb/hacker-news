@@ -1,6 +1,6 @@
 import React from "react";
 import bem from "bera";
-import { getFormattedDate } from "../../utils";
+import { getFormattedDate, getSourceSite } from "../../utils";
 
 const componentClass = bem("listItems");
 
@@ -16,8 +16,12 @@ const ListItems = ({ items }: ListItemsProps) => {
           <li className={componentClass("itemContainer")}>
             <a className={componentClass("link")} href={item.url}>
               <div className={componentClass("title")}>{item.title}</div>
+              <span className={componentClass("domain")}>
+                {getSourceSite(item.url)}
+              </span>
               <div className={componentClass("info")}>
-                by <span className={componentClass("author")}>{item.by}</span>
+                last update by{" "}
+                <span className={componentClass("author")}>{item.by}</span> @{" "}
                 <span>({getFormattedDate(item.time)})</span>
               </div>
             </a>
