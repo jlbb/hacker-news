@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent, waitForElement } from "@testing-library/react";
-import App from "./App";
+import App from "../App";
 import { Provider } from "react-redux";
 import configureMockStore from "redux-mock-store";
 
