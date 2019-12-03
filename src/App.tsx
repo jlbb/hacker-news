@@ -4,6 +4,7 @@ import "./App.scss";
 import { useNewsApi } from "./store/hooks";
 import ListItems from "./components/ListItems";
 import { N_STORY_ITEMS } from "./constants";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   const [newsItems, fetchStories, storiesId, fetchStoriesId] = useNewsApi();
@@ -23,7 +24,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h3 className="App__title">Hacker News!</h3>
+      <NavBar />
       <ListItems items={newsItems} />
       <Pagination
         hideDisabled

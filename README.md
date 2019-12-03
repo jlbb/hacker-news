@@ -12,17 +12,17 @@ To run the tests
 
 `npm test`
 
-## ToDo (in progress)
+## Roadmap (in progress)
 
 In the short-term future new features can be added to enhance and scale-up the app. Some of the proposed features to be implemented are (in the following order):
 
-- **Header**
+- **NavBar**
 
 > For showing basic options as the login / signup or logout buttons, as other menus in order to navigate within the app
 
 - **Login / Signup**
 
-> Implement a basic backend to signup / login an user, storting basic info as an username, password and some possible extra options for the context of the page and user. The proposed backend would be implemented using MongoDB and Apollo GraphQL.
+> Implement a basic backend to signup / login an user, storing basic info as an username, password and some possible extra options for the context of the page and user. The proposed backend would be implemented using MongoDB and Apollo GraphQL.
 
 - **Bookmark stories**
 

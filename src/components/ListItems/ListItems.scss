@@ -1,8 +1,8 @@
-.listItems {
+.ListItems {
   padding: 0;
 }
 
-.listItems__itemContainer {
+.ListItems__itemContainer {
   background-color: linen;
   border: 1px solid blueviolet;
   border-radius: 6px;
@@ -13,20 +13,20 @@
   min-height: 10px;
   padding: 10px 5px 5px 10px;
   position: relative;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease-out 0.4s;
   @media screen and (max-width: 400px) {
     max-width: 300px;
   }
 }
 
-.listItems__itemContainer:hover {
-  @media screen and (min-width: 768px) {
-    background-color: lightgreen;
+.ListItems__itemContainer:hover {
+  background-color: lightgreen;
+  @media screen and (min-width: 900px) {
     transform: scale(1.2);
   }
 }
 
-.listItems__link {
+.ListItems__link {
   color: darkred;
   min-height: 50px;
   align-items: center;
@@ -40,17 +40,17 @@
   }
 }
 
-.listItems__title {
+.ListItems__title {
   align-self: flex-start;
   font-weight: bold;
   text-align: left;
 }
 
-.listItems__domain {
+.ListItems__domain {
   font-size: 12px;
 }
 
-.listItems__info {
+.ListItems__info {
   align-self: flex-end;
   color: black;
   font-size: 12px;
@@ -63,6 +63,6 @@
   }
 }
 
-.listItems__author {
+.ListItems__author {
   font-weight: bold;
 }
