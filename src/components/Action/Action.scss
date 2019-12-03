@@ -11,11 +11,17 @@
   padding: 10px;
   min-width: 80px;
   text-transform: capitalize;
-  transition: all 0.6s ease-in-out 0.2s;
+  transition: all 0.4s ease-in-out 0.2s;
+}
+
+.Action__pressed,
+.Action:hover {
+  background-color: #7c1e1e !important;
+  border-bottom-color: #7c1e1e;
+  font-size: 20px;
+  transition: none;
 }
 
 .Action:hover {
-  font-size: 20px;
-  background-color: black;
-  border-bottom-color: #7c1e1e;
+  transition: all 0.4s ease-in-out 0.2s;
 }
