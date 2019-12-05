@@ -1,0 +1,51 @@
+.LoginForm__formContainer {
+  align-items: flex-start;
+  display: flex;
+  background: black;
+  flex-direction: column;
+  min-height: 200px;
+  min-width: 320px;
+  padding: 15px;
+}
+
+.LoginForm__inputField,
+.LoginForm__submitButton {
+  border: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 30px;
+  outline: none;
+  max-width: 320px;
+  min-width: 100px;
+  padding-left: 10px;
+  width: 100%;
+
+  &.LoginForm__inputField {
+    margin-bottom: 10px;
+  }
+}
+
+.LoginForm__submitButton {
+  background-color: darkgreen;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 15px;
+
+  &:active {
+    background-color: green;
+  }
+}
+
+.LoginForm__loginSwitch {
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: wheat;
+  }
+}
