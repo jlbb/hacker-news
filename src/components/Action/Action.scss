@@ -1,27 +1,56 @@
-.Action {
-  align-items: center;
+.Action__mainActionContainer {
+  display: flex;
   background-color: #0b0b0b;
   border-bottom: 2px solid #611919;
   color: white;
   cursor: pointer;
-  display: flex;
   font-size: 18px;
-  height: 60px;
-  justify-content: center;
-  padding: 10px;
-  min-width: 80px;
-  text-transform: capitalize;
-  transition: all 0.4s ease-in-out 0.2s;
+  max-width: 120px;
+  // position: relative;
+  transition: all 0.2s ease 0.1s;
+
+  // &.-hasMenu {
+  //   .Action__mainAction {
+  //     min-width: 100px;
+  //   }
+  // }
 }
 
-.Action__pressed,
-.Action:hover {
+.Action__mainActionContainer.-pressed,
+.Action__mainActionContainer:hover {
   background-color: #7c1e1e !important;
-  border-bottom-color: #7c1e1e;
   font-size: 20px;
-  transition: none;
+
+  &.Action__mainActionContainer.-pressed {
+    border-bottom-color: yellowgreen;
+  }
 }
 
-.Action:hover {
-  transition: all 0.4s ease-in-out 0.2s;
+.Action__mainAction {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  padding: 10px;
+  min-width: 60px;
+  text-transform: capitalize;
+}
+
+.Action__toggleMenu {
+  align-self: center;
+  background-color: white;
+  cursor: pointer;
+  font-size: 12px;
+  height: fit-content;
+  margin-right: 5px;
+  // position: absolute;
+  // right: 0;
+  width: 16px;
+  transition: transform 0.2s;
+  -webkit-mask: url(../../images/icon-chevron-down.svg) no-repeat center;
+  mask: url(../../images/icon-chevron-down.svg) no-repeat center;
+}
+
+.Action__toggleMenu.-pressed {
+  transform: rotate(-180deg);
 }
