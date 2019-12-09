@@ -1,0 +1,23 @@
+{
+    "name": "backend-mongo-apollo",
+    "version": "1.0.0",
+    "description": "Backend using MongoDB and Apollo Server technologies",
+    "main": "app.js",
+    "dependencies": {
+        "apollo-server": "^2.9.12",
+        "dotenv": "^8.2.0",
+        "mongoose": "^5.7.12"
+    },
+    "scripts": {
+        "server": "node app.js",
+        "test": "test"
+    },
+    "keywords": [
+        "MongoDB",
+        "GraphQL",
+        "Apollo",
+        "MERN"
+    ],
+    "author": "Jose Luis Barreche Burgos",
+    "license": "MIT"
+}
