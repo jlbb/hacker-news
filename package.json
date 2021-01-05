@@ -11,7 +11,7 @@
   "dependencies": {
     "@types/lodash": "^4.14.149",
     "@types/react-js-pagination": "^3.0.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bera": "^0.1.2",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
